@@ -1,5 +1,17 @@
 Zenith Site Web
 
+Avant tout :
+ 
+  Il faut installer Node.js puis rentrer dans le terminal du projet
+
+    npm ci
+
+Deploiement local: 
+  
+  La commande suivante va rouler le site web sur localhost
+
+    npm start
+
 Application Angular déployée sur GitHub Pages
 🚀 Déploiement
 Commandes pour déployer
