@@ -1,0 +1,83 @@
+.site-header {
+  width: 100%;
+  background-image: url('/assets/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2vmin 0;
+  min-height: 25vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 120vmin;
+  margin: 0 auto;
+  padding: 0 2vmin;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vmin;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5vmin;
+  border-radius: 0.5vmin;
+  width: fit-content;
+}
+
+/* Rest of your existing vmin styles... */
+
+/* Navigation links */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5vmin 1vmin;
+  font-size: 2vmin;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0066cc;
+}
+
+.nav-link.active {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Separator pipes */
+.nav-separator {
+  color: #ccc;
+  user-select: none;
+  font-size: 2vmin;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .site-header {
+    min-height: 60vmin;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 0.5vmin;
+    padding: 2vmin;
+  }
+
+  .nav-link {
+    font-size: 3vmin;
+    padding: 1vmin 2vmin;
+  }
+
+  .nav-separator {
+    display: none;
+  }
+}

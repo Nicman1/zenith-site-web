@@ -1,8 +1,30 @@
-<header>
-  <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a> |
-    <a routerLink="/a-propos" routerLinkActive="active">À propos</a> |
-    <a routerLink="/projets" routerLinkActive="active">Projets</a> |
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-container">
+    <nav class="main-nav">
+      <a routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-link">Accueil</a>
+      <span class="nav-separator">|</span>
+      <a routerLink="/team"
+         routerLinkActive="active"
+         class="nav-link">L'Équipe</a>
+      <span class="nav-separator">|</span>
+      <a routerLink="/projects"
+         routerLinkActive="active"
+         class="nav-link">Projets</a>
+      <span class="nav-separator">|</span>
+      <a routerLink="/contact"
+         routerLinkActive="active"
+         class="nav-link">Nous Rejoindre</a>
+      <span class="nav-separator">|</span>
+      <a routerLink="/sponsors"
+         routerLinkActive="active"
+         class="nav-link">Commanditaires</a>
+      <span class="nav-separator">|</span>
+      <a routerLink="/gallery"
+         routerLinkActive="active"
+         class="nav-link">Gallerie</a>
+    </nav>
+  </div>
 </header>
