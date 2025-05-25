@@ -1,0 +1,61 @@
+.crash-countdown-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #495057;
+  background: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  min-width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .time-display {
+    flex-wrap: wrap;
+  }
+
+  .time-unit {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .value {
+    font-size: 2rem;
+    min-width: 60px;
+  }
+}
