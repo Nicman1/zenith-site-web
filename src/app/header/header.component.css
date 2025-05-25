@@ -32,9 +32,6 @@
   width: fit-content;
 }
 
-/* Rest of your existing vmin styles... */
-
-/* Navigation links */
 .nav-link {
   text-decoration: none;
   color: #333;
@@ -53,9 +50,8 @@
   font-weight: bold;
 }
 
-/* Separator pipes */
 .nav-separator {
-  color: #ccc;
+  color: #5c5959;
   user-select: none;
   font-size: 2vmin;
 }
