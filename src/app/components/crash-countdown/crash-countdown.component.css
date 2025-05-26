@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-color: #000000;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   max-width: 900px;
@@ -32,12 +32,12 @@
   line-height: 80px;
   margin: 0 15px;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   align-self: center;
 }
 
 .content {
-  height: 80px;
+  height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -48,35 +48,38 @@
 
 .flip {
   position: absolute;
-  height: 80px;
-  width: 75px;
+  height: 90px;   /* augmenté */
+  width: 90px;    /* augmenté */
+  border-radius: 6px;
 }
 
 .up,
 .down {
   text-align: center;
-  height: 40px;
+  height: 45px;   /* moitié de .flip */
   overflow: hidden;
+  border-radius: 6px;
 }
 
 .up > div,
 .down > div {
-  font-size: 56px; /* Slightly increased for clarity */
+  font-size: 70px;          /* augmenté */
   font-weight: 800;
-  line-height: 80px;
+  line-height: 90px;        /* égal à la hauteur totale de .flip */
   align-self: center;
 }
 
 .down > div > div {
-  margin-top: -40px; /* Adjusted for new height */
+  margin-top: -45px;        /* moitié de .flip */
 }
 
 .flip-card {
   perspective: 300px;
   position: absolute;
-  height: 40px;
-  width: 75px; /* Increased width */
+  height: 45px;   /* moitié de .flip */
+  width: 90px;    /* même largeur que .flip */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 .flip-card-inner {
@@ -94,22 +97,27 @@
   height: 100%;
   backface-visibility: hidden;
   overflow: hidden;
+  border-radius: 6px;
 }
 
 .flip-card-front,
 .up {
-  background-color: #bbb;
-  color: black;
+  background-color: #2e2e2e;
+  color: white;
 }
 
 .flip-card-back,
 .down {
-  background-color: #2980b9;
-  color: black;
+  background-color: #2e2e2e;
+  color: white;
 }
 
 .flip-card-back {
   transform: rotateX(180deg);
+}
+
+.up {
+  border-bottom: 1px solid #444; /* ligne séparatrice */
 }
 
 .time-separator {
@@ -119,6 +127,7 @@
 }
 
 .label {
+  color: white;
   display: block;
   text-align: center;
   margin-top: 5px;
