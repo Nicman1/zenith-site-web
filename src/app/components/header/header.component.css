@@ -1,13 +1,10 @@
 .site-header {
   width: 100%;
-  background-size: contain;
-  background-position: center;
+  height: 20vh;
+  background-size: cover;
+  background-position: center 40%;
   background-repeat: no-repeat;
-  padding: 2vmin 0;
-  min-height: 25vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 .header-container {

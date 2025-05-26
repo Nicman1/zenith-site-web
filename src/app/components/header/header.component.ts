@@ -11,5 +11,4 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-    protected backgroundImage: string = 'assets/logo.png';
 }
