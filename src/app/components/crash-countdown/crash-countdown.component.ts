@@ -8,8 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./crash-countdown.component.css']
 })
 export class CrashCountdownComponent implements OnInit, OnDestroy {
-  lastCrashDate = new Date("2024-06-15T14:30:00");
-
+  lastCrashDate = new Date("2025-05-18T19:00:00");
   days = 0;
   hours = 0;
   minutes = 0;
