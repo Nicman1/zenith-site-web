@@ -9,7 +9,7 @@ import {GalleryComponent} from './pages/gallery/gallery.component';
 export const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'team', component: TeamComponent },
-  { path: 'contact', component: ContactComponent  },
+  { path: 'join', component: ContactComponent  },
   { path: 'projects', component: ProjectsComponent  },
   { path: 'sponsors', component: SponsorsComponent  },
   { path: 'gallery', component: GalleryComponent  },
