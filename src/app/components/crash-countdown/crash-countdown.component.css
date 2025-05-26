@@ -3,12 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  background-color: #000000;
-  border-radius: 10px;
+  background-color: #091c2a;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 40px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 2rem 0;
+  overflow: visible;
+  z-index: 1;
 }
 
 .time-display {
@@ -24,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 80px;
+  width: 90px;
 }
 
 .time-separator {
@@ -40,10 +46,8 @@
   height: 70px;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  transform: translate(-50%, -50%);
+  /* Suppression du transform qui causait le problème */
 }
 
 .flip {
@@ -102,13 +106,13 @@
 
 .flip-card-front,
 .up {
-  background-color: #2e2e2e;
+  background-color: #c55e3d;
   color: white;
 }
 
 .flip-card-back,
 .down {
-  background-color: #2e2e2e;
+  background-color: #c55e3d;
   color: white;
 }
 
@@ -130,7 +134,7 @@
   color: white;
   display: block;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 30px;
   font-weight: bold;
   font-size: 14px;
 }
