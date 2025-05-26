@@ -1,22 +1,42 @@
 <div class="crash-countdown-container">
   <div class="time-display">
     <div class="time-unit">
-      <span class="value">{{ days }}</span>
+      <div class="flip-container">
+        <div class="flip-card" [class.flipping]="flipping.days">
+          <div class="top">{{previousDays || days}}</div>
+          <div class="bottom">{{days}}</div>
+        </div>
+      </div>
       <span class="label">Jours</span>
     </div>
-    <br>
+    <span class="time-separator">:</span>
     <div class="time-unit">
-      <span class="value">{{ hours }}</span>
+      <div class="flip-container">
+        <div class="flip-card" [class.flipping]="flipping.hours">
+          <div class="top">{{previousHours || hours}}</div>
+          <div class="bottom">{{hours}}</div>
+        </div>
+      </div>
       <span class="label">Heures</span>
     </div>
-    <br>
+    <span class="time-separator">:</span>
     <div class="time-unit">
-      <span class="value">{{ minutes }}</span>
+      <div class="flip-container">
+        <div class="flip-card" [class.flipping]="flipping.minutes">
+          <div class="top">{{previousMinutes || minutes}}</div>
+          <div class="bottom">{{minutes}}</div>
+        </div>
+      </div>
       <span class="label">Minutes</span>
     </div>
-    <br>
+    <span class="time-separator">:</span>
     <div class="time-unit">
-      <span class="value">{{ seconds }}</span>
+      <div class="flip-container">
+        <div class="flip-card" [class.flipping]="flipping.seconds">
+          <div class="top">{{previousSeconds || seconds}}</div>
+          <div class="bottom">{{seconds}}</div>
+        </div>
+      </div>
       <span class="label">Secondes</span>
     </div>
   </div>
