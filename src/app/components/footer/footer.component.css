@@ -24,7 +24,6 @@
 .footer-logo {
   width: 150px;
   height: auto;
-  filter: brightness(0) invert(1);
 }
 
 .social-links {
@@ -82,7 +81,6 @@
   color: #95a5a6;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
