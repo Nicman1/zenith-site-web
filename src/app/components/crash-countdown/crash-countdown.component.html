@@ -1,40 +1,154 @@
 <div class="crash-countdown-container">
   <div class="time-display">
+    <!-- Days -->
     <div class="time-unit">
-      <div class="flip-container">
-        <div class="flip-card" [class.flipping]="flipping.days">
-          <div class="top">{{previousDays || days}}</div>
-          <div class="bottom">{{days}}</div>
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{days}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousDays}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="days" (@flip.done)="previousDays = days">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousDays}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{days}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <span class="label">Jours</span>
     </div>
+
     <span class="time-separator">:</span>
+
+    <!-- Hours -->
     <div class="time-unit">
-      <div class="flip-container">
-        <div class="flip-card" [class.flipping]="flipping.hours">
-          <div class="top">{{previousHours || hours}}</div>
-          <div class="bottom">{{hours}}</div>
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{hours}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousHours}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="hours" (@flip.done)="previousHours = hours">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousHours}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{hours}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <span class="label">Heures</span>
     </div>
+
     <span class="time-separator">:</span>
+
+    <!-- Minutes -->
     <div class="time-unit">
-      <div class="flip-container">
-        <div class="flip-card" [class.flipping]="flipping.minutes">
-          <div class="top">{{previousMinutes || minutes}}</div>
-          <div class="bottom">{{minutes}}</div>
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{minutes}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousMinutes}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="minutes" (@flip.done)="previousMinutes = minutes">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousMinutes}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{minutes}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <span class="label">Minutes</span>
     </div>
+
     <span class="time-separator">:</span>
+
+    <!-- Seconds -->
     <div class="time-unit">
-      <div class="flip-container">
-        <div class="flip-card" [class.flipping]="flipping.seconds">
-          <div class="top">{{previousSeconds || seconds}}</div>
-          <div class="bottom">{{seconds}}</div>
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{seconds}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousSeconds}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="seconds" (@flip.done)="previousSeconds = seconds">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousSeconds}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{seconds}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <span class="label">Secondes</span>
