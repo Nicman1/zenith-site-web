@@ -35,6 +35,28 @@
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
+  max-width: 1200rem;
+  max-height: 800rem;
+  margin: 0 auto;
+}
+
+.grid-logo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .grid-logo {
+    height: 150px;
+  }
 }
