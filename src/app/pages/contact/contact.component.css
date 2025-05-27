@@ -13,9 +13,7 @@
 
 .intro {
   font-size: 1.125rem;
-  color: #374151;
   text-align: center;
-  max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
   padding: 60px 40px;
@@ -31,8 +29,13 @@
   color: white;
 }
 
-.section-cta {
-  background: #f1f5f9;
+.divider-top {
+  padding-bottom: 30px;
+  clip-path: polygon(
+    0% 15%, 5% 0%, 10% 15%, 15% 0%, 20% 15%, 25% 0%, 30% 15%, 35% 0%, 40% 15%, 45% 0%,
+    50% 15%, 55% 0%, 60% 15%, 65% 0%, 70% 15%, 75% 0%, 80% 15%, 85% 0%, 90% 15%, 95% 0%,
+    100% 15%, 100% 100%, 0% 100%
+  );
 }
 
 .divider {
@@ -49,6 +52,16 @@
     );
 }
 
+.divider-bottom {
+  padding-top: 30px;
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 85%,
+    95% 100%, 90% 85%, 85% 100%, 80% 85%, 75% 100%, 70% 85%, 65% 100%, 60% 85%, 55% 100%,
+    50% 85%, 45% 100%, 40% 85%, 35% 100%, 30% 85%, 25% 100%, 20% 85%, 15% 100%, 10% 85%, 5% 100%,
+    0% 85%
+  );
+}
+
 .section {
   padding: 60px 40px;
 }
@@ -61,15 +74,7 @@
   text-align: center;
   letter-spacing: -0.02em;
 }
-.yellow {
-    background: rgba(254, 212, 3);
-}
-.cream {
-  background-color: #f9f2e8;
-}
-.purple {
-  background: rgba(167, 145, 228, 1);
-}
+
 .section-cta .cta-title {
   color: #1f2937;
 }
@@ -123,7 +128,6 @@
 .requirements-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -157,9 +161,8 @@
   font-weight: 500;
 }
 
-.requirements-note {
+.note {
   text-align: center;
-  color: #6b7280;
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 24px;
@@ -207,51 +210,3 @@
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding: 40px 20px;
-  }
-
-  .header h1 {
-    font-size: 2.25rem;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-
-  .intro {
-    padding: 40px 20px;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .benefit-card:last-child {
-    grid-column: 1;
-    max-width: none;
-  }
-
-  .requirements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-title {
-    font-size: 1.875rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header h1 {
-    font-size: 1.875rem;
-  }
-
-  .benefit-card {
-    padding: 24px;
-  }
-
-  .divider {
-    height: 40px;
-  }
-}

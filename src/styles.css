@@ -77,3 +77,26 @@ button.text-roll:hover .text-container {
 button.text-roll:hover .text-clone {
   transform: translateY(0%);
 }
+
+.yellow {
+    background: rgba(254, 212, 3);
+}
+.yellow-text {
+  color: rgba(254, 212, 3);
+}
+.cream {
+  background-color: #f9f2e8;
+}
+.cream-text {
+  color: #f9f2e8;
+}
+.purple {
+  background: rgba(167, 145, 228, 1);
+}
+
+.purple-text {
+  color: rgba(167, 145, 228, 1);
+}
+.dark-blue {
+  background-color: #091c2a;
+}
