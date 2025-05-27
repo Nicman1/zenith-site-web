@@ -1,29 +1,21 @@
-<header class="site-header">
+<div class="site-header" id="siteHeader">
   <div class="header-background">
-      <img src="assets/header.png">
-      <img src="assets/inverse-logo.png" class="header-logo">
+    <img src="assets/header.jpeg" alt="Header Background" id="parallaxImage">
+    <div class="header-overlay"></div>
+    <div class="header-logo" id="headerLogo">
+      <img src="assets/inverse-logo.png" alt="Logo">
+    </div>
   </div>
-  <div class="header-container">
-    <nav class="main-nav">
-      <a routerLink="/"
-         routerLinkActive="active"
-         [routerLinkActiveOptions]="{ exact: true }"
-         class="nav-link">Accueil</a>
-      <a routerLink="/team"
-         routerLinkActive="active"
-         class="nav-link">L'Équipe</a>
-      <a routerLink="/projects"
-         routerLinkActive="active"
-         class="nav-link">Projets</a>
-      <a routerLink="/join"
-         routerLinkActive="active"
-         class="nav-link">Joindre L'Équipe</a>
-      <a routerLink="/sponsors"
-         routerLinkActive="active"
-         class="nav-link">Commanditaires</a>
-      <a routerLink="/gallery"
-         routerLinkActive="active"
-         class="nav-link">Gallerie</a>
-    </nav>
+  <div class="header-nav" id="headerNav">
+    <div class="nav-container">
+      <ul class="main-nav" id="mainNav">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Accueil</a></li>
+        <li><a routerLink="/team" routerLinkActive="active" class="nav-link">L'Équipe</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active" class="nav-link">Projets</a></li>
+        <li><a routerLink="/join" routerLinkActive="active" class="nav-link">Joindre L'Équipe</a></li>
+        <li><a routerLink="/sponsors" routerLinkActive="active" class="nav-link">Commanditaires</a></li>
+        <li><a routerLink="/gallery" routerLinkActive="active" class="nav-link">Gallerie</a></li>
+      </ul>
+    </div>
   </div>
-</header>
+</div>
