@@ -9,3 +9,71 @@ body {
   overflow-x: hidden;
 }
 
+button.text-roll {
+  background-color: #fed403;
+  font-size: x-large;
+  padding: 15px 20px;
+  border-radius: 50px;
+  color: #091c2a;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  width: fit-content;
+  isolation: isolate;
+}
+
+button.text-roll .text-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: 1 / 1;
+  transition: transform .3s cubic-bezier(.76, 0, .24, 1);
+  z-index: 102;
+}
+
+button.text-roll .text-clone {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: 1 / 1;
+  color: white;
+  transform: translateY(250%);
+  transition: transform .3s cubic-bezier(.76, 0, .24, 1);
+  z-index: 103;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button.text-roll .text-container {
+    transition-delay: .1s;
+  }
+
+  button.text-roll .text-clone {
+    transition-delay: .1s;
+  }
+}
+button.text-roll::before {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a791e4;
+  transition: bottom .4s cubic-bezier(.76, 0, .24, 1);
+  border-radius: 50px;
+  z-index: 101;
+}
+
+button.text-roll:hover::before {
+  bottom: 0;
+}
+
+button.text-roll:hover .text-container {
+  transform: translateY(-250%);
+}
+
+button.text-roll:hover .text-clone {
+  transform: translateY(0%);
+}

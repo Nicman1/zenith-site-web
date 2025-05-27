@@ -1,11 +1,23 @@
 <div class="site-header" id="siteHeader">
   <div class="header-background">
-    <img src="assets/header.jpeg" alt="Header Background" class="" id="parallaxImage">
+      @if (route === '/join') {
+            <img src="assets/main1.png" alt="Header Background" class="" id="parallaxImage">
+      } @else if (route === '/team') {
+          <img src="assets/team.png" alt="Header Background" class="" id="parallaxImage">
+      } @else {
+            <img src="assets/header.jpeg" alt="Header Background" class="" id="parallaxImage">
+      }
   </div>
   <div class="header-overlay"></div>
-  <div class="header-logo" id="headerLogo">
-    <img src="assets/inverse-logo.png" alt="Logo">
-  </div>
+      <div class="header-logo" id="headerLogo">
+       @if (route === '/join') {
+           <h1>Rejoins l'équipe Zénith</h1>
+            <p class="subtitle">Propulse l'innovation aérospatiale vers de nouveaux sommets</p>
+       } @else {
+            <img src="assets/inverse-logo.png" alt="Logo">
+       }
+      </div>
+
   <div class="header-nav" id="headerNav">
     <div class="nav-container">
       <ul class="main-nav" id="mainNav">

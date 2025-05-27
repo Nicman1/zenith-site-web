@@ -1,5 +1,6 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Component, HostListener, AfterViewInit} from '@angular/core';
+import {RouterLink, RouterLinkActive, Router, NavigationEnd} from '@angular/router';
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,16 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 })
 export class HeaderComponent implements AfterViewInit {
   ticking = false;
+  route: string = '';
+
+  constructor(router: Router) {
+    router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.route = event.urlAfterRedirects;
+        console.log(this.route);
+      });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
