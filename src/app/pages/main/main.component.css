@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  font-family: 'Arial', sans-serif;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -49,6 +48,104 @@
   border-radius: 0.5rem;
   box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+}
+
+/*.image-drone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    background-color: #fed403;
+    font-size: x-large;
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: #091c2a;
+  }
+
+  button:hover {
+    background-color: #ffae00;
+  }
+}*/
+.image-drone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image-drone button.text-roll {
+  background-color: #fed403;
+  font-size: x-large;
+  padding: 15px 20px;
+  border-radius: 50px;
+  color: #091c2a;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  width: fit-content;
+}
+
+/* Container pour le texte original */
+.image-drone button.text-roll .text-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: 1 / 1;
+  transition: transform .3s cubic-bezier(.76, 0, .24, 1);
+  z-index: 2;
+}
+
+/* Container pour le texte clone */
+.image-drone button.text-roll .text-clone {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: 1 / 1;
+  color: white;
+  transform: translateY(250%);
+  transition: transform .3s cubic-bezier(.76, 0, .24, 1);
+  z-index: 3;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image-drone button.text-roll .text-container {
+    transition-delay: .1s;
+  }
+
+  .image-drone button.text-roll .text-clone {
+    transition-delay: .1s;
+  }
+}
+
+/* Fond violet qui monte */
+.image-drone button.text-roll::before {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a791e4;
+  transition: bottom .4s cubic-bezier(.76, 0, .24, 1);
+  border-radius: 50px;
+  z-index: 1;
+}
+
+/* Au survol */
+.image-drone button.text-roll:hover::before {
+  bottom: 0;
+}
+
+.image-drone button.text-roll:hover .text-container {
+  transform: translateY(-250%);
+}
+
+.image-drone button.text-roll:hover .text-clone {
+  transform: translateY(0%);
 }
 
 @media (max-width: 768px) {
