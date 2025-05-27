@@ -57,10 +57,10 @@ export class HeaderComponent implements AfterViewInit {
     if (headerNav) {
       if (scrolled >= headerHeight) {
         headerNav.classList.add('sticky');
-        siteHeader!.style.zIndex = '30';
+        // siteHeader!.style.zIndex = '30';
       } else {
         headerNav.classList.remove('sticky');
-        siteHeader!.style.zIndex = '0';
+        // siteHeader!.style.zIndex = '0';
       }
     }
   }
