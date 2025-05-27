@@ -1,9 +1,10 @@
 .site-footer {
-  background-color: #001F3F; /* bleu foncé ou adapte selon ton thème */
+  background-color: #001F3F;
   color: white;
   padding: 4vh 3vw;
   display: flex;
   justify-content: center;
+  z-index: 40;
 }
 
 .footer-container {

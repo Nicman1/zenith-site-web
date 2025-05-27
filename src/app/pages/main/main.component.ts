@@ -4,7 +4,7 @@ import {CrashCountdownComponent} from '../../components/crash-countdown/crash-co
 @Component({
   selector: 'app-main',
   imports: [
-    CrashCountdownComponent
+    CrashCountdownComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
