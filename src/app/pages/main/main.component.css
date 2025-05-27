@@ -50,29 +50,13 @@
   transition: transform 0.3s ease;
 }
 
-/*.image-drone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-  button {
-    background-color: #fed403;
-    font-size: x-large;
-    padding: 15px 20px;
-    border-radius: 50px;
-    color: #091c2a;
-  }
-
-  button:hover {
-    background-color: #ffae00;
-  }
-}*/
 .image-drone {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: 100;
 }
 
 .image-drone button.text-roll {
@@ -87,6 +71,10 @@
   overflow: hidden;
   display: grid;
   width: fit-content;
+  /* Forcer un nouveau contexte de stacking */
+  isolation: isolate;
+  /* Z-index plus élevé pour éviter les conflits */
+  z-index: 150;
 }
 
 /* Container pour le texte original */
@@ -96,7 +84,7 @@
   height: 100%;
   grid-area: 1 / 1;
   transition: transform .3s cubic-bezier(.76, 0, .24, 1);
-  z-index: 2;
+  z-index: 102;
 }
 
 /* Container pour le texte clone */
@@ -108,7 +96,7 @@
   color: white;
   transform: translateY(250%);
   transition: transform .3s cubic-bezier(.76, 0, .24, 1);
-  z-index: 3;
+  z-index: 103;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -132,7 +120,7 @@
   background: #a791e4;
   transition: bottom .4s cubic-bezier(.76, 0, .24, 1);
   border-radius: 50px;
-  z-index: 1;
+  z-index: 101;
 }
 
 /* Au survol */
