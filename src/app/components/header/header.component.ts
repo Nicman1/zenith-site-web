@@ -36,12 +36,12 @@ export class HeaderComponent implements AfterViewInit {
     const parallaxImage = document.getElementById('parallaxImage');
     const headerLogo = document.getElementById('headerLogo');
 
-    const imageRate = scrolled * -0.7;
+    const imageRate = scrolled * -1;
     if (parallaxImage) {
       parallaxImage.style.transform = `translateY(${imageRate}px)`;
     }
 
-    const logoRate = scrolled * -0.4;
+    const logoRate = scrolled * -0.2;
     if (headerLogo) {
       headerLogo.style.transform = `translate(-50%, -50%) translateY(${logoRate}px)`;
     }
@@ -52,15 +52,13 @@ export class HeaderComponent implements AfterViewInit {
     const siteHeader = document.getElementById('siteHeader');
     const scrolled = window.pageYOffset;
     // @ts-ignore
-    const headerHeight = siteHeader?.offsetHeight - 40;
+    const headerHeight = siteHeader?.offsetHeight - 50;
 
     if (headerNav) {
       if (scrolled >= headerHeight) {
         headerNav.classList.add('sticky');
-        // siteHeader!.style.zIndex = '30';
       } else {
         headerNav.classList.remove('sticky');
-        // siteHeader!.style.zIndex = '0';
       }
     }
   }
