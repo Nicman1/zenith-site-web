@@ -109,8 +109,15 @@ button.text-roll:hover .text-clone {
   color: #c55e3d;
 }
 
+.orange {
+  background-color: #c55e3d;
+}
+
 .lighter-blue-text {
-  color: #0b5a95;
+  color: #046ab6;
+}
+.lighter-blue {
+  background-color: #046ab6;
 }
 
 .zigzag {
@@ -182,4 +189,8 @@ button.text-roll:hover .text-clone {
     6.25% 97.5%, 5.625% 100%, 5% 97.5%, 4.375% 100%, 3.75% 97.5%, 3.125% 100%, 2.5% 97.5%, 1.875% 100%, 1.25% 97.5%, 0.625% 100%,
     0% 97.5%
   );
+}
+
+.zigzag-imbrique {
+  margin-top: -15px;
 }
