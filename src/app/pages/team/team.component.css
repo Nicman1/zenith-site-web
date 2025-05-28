@@ -122,6 +122,220 @@
   font-weight: 500;
 }
 
+/* Section de présentation d'équipe - intégration avec style Zenith */
+.team-presentation {
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 1000px;
+}
+
+.team-presentation-row {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Section équipe à gauche */
+.team-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.team-name {
+  font-size: 0.9rem;
+  font-weight: 1000;
+  color: #2c5aa0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #2c5aa0;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.team-leaders {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Conteneur pour un chef */
+.leader-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo du chef - style cohérent avec profile-image */
+.leader-photo {
+  width: 100px;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #2c5aa0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.leader-photo:hover {
+  transform: translateY(-5px);
+}
+
+.leader-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informations du chef */
+.leader-info {
+  flex: 1;
+}
+
+.leader-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.leader-title {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Section description à droite */
+.team-description-section {
+  flex: 1.2;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  border-left: 5px solid #2c5aa0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-description-title {
+  font-size: 0.9rem;
+  font-weight: 1000;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.team-description-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+/* Variante pour équipe avec 2 chefs */
+.team-presentation.dual-leaders .team-leaders {
+  gap: 10px;
+}
+
+.team-presentation.dual-leaders .leader-container {
+  padding: 12px;
+}
+
+.team-presentation.dual-leaders .leader-photo {
+  width: 85px;
+  height: 110px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-presentation-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-info-section,
+  .team-description-section {
+    flex: none;
+  }
+
+  .leader-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .leader-photo {
+    width: 120px;
+    height: 140px;
+  }
+}
+
+/* Styles de couleurs pour les équipes Zenith */
+.team-presentation.controle .team-name,
+.team-presentation.controle .leader-photo {
+  border-color: #e74c3c;
+}
+
+.team-presentation.controle .team-description-section {
+  border-left-color: #e74c3c;
+}
+
+.team-presentation.systeme-embarque .team-name,
+.team-presentation.systeme-embarque .leader-photo {
+  border-color: #9b59b6;
+}
+
+.team-presentation.systeme-embarque .team-description-section {
+  border-left-color: #9b59b6;
+}
+
+.team-presentation.chassis .team-name,
+.team-presentation.chassis .leader-photo {
+  border-color: #f39c12;
+}
+
+.team-presentation.chassis .team-description-section {
+  border-left-color: #f39c12;
+}
+
+.team-presentation.propulsion .team-name,
+.team-presentation.propulsion .leader-photo {
+  border-color: #27ae60;
+}
+
+.team-presentation.propulsion .team-description-section {
+  border-left-color: #27ae60;
+}
+
+.team-presentation.payload .team-name,
+.team-presentation.payload .leader-photo {
+  border-color: #34495e;
+}
+
+.team-presentation.payload .team-description-section {
+  border-left-color: #34495e;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .header h1 {
