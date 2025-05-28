@@ -100,3 +100,15 @@ button.text-roll:hover .text-clone {
 .dark-blue {
   background-color: #091c2a;
 }
+
+.dark-blue-text {
+  color: #091c2a;
+}
+
+.orange-text {
+  color: #c55e3d;
+}
+
+.lighter-blue-text {
+  color: #0b5a95;
+}
