@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sponsors',
-  imports: [],
+    imports: [],
   templateUrl: './sponsors.component.html',
   styleUrl: './sponsors.component.css'
 })
