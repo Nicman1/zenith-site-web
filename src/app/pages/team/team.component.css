@@ -155,32 +155,28 @@
   padding-bottom: 8px;
   display: inline-block;
 }
-.team-presentation.controle .team-name,
-.team-presentation.controle .leader-photo {
+.team-presentation.controle .team-name {
   color: #046ab6;
   border-bottom: 3px solid #046ab6;
 }
 .team-presentation.controle .team-description-section {
   border-left-color: #046ab6;
 }
-.team-presentation.payload .team-name,
-.team-presentation.payload .leader-photo {
+.team-presentation.payload .team-name{
   color: #a791e4;
   border-bottom: 3px solid #a791e4;
 }
 .team-presentation.payload .team-description-section {
   border-left-color: #a791e4;
 }
-.team-presentation.systeme-embarque .team-name,
-.team-presentation.systeme-embarque .leader-photo {
+.team-presentation.systeme-embarque .team-name {
   color: #fed403;
   border-bottom: 3px solid #fed403;
 }
 .team-presentation.systeme-embarque .team-description-section {
   border-left-color: #fed403;
 }
-.team-presentation.propulsion .team-name,
-.team-presentation.propulsion .leader-photo {
+.team-presentation.propulsion .team-name{
   color: #c55e3d;
   border-bottom: 3px solid #c55e3d;
 }
